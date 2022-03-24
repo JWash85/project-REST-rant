@@ -1,5 +1,6 @@
 //Get the enviroment variables
 require('dotenv').config()
+
 //require needed node modules
 const express = require('express')
 const app = express()
