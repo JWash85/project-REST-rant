@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 //Using arrow function
 app.get('*', (req, res) => {
     //.status(404) gives a legitmate 404 status code
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('error404')//.send('<h1>404 Page</h1>')
 })
 //Pulls port variable from .env file
 app.listen(process.env.PORT)
