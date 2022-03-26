@@ -5,11 +5,14 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 //Code to import the router from the controller places.js
 app.use('/places', require('./controllers/places'))
 
 app.get('/', function(req, res){
-    res.send('Hello world!')
+    res.render('home')
 })
 
 //Make a wildcard route to display 404 error
