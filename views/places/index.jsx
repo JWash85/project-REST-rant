@@ -1,26 +1,31 @@
-const React = require('react')
-const Def = require('../default')
+const React = require("react");
+const Def = require("../default");
 
-function index (data) {
-    //Formatting data in place array into HTML so web page can display it.
-    let placesFormatted = data.places.map((place) => {
-      return (
-        <div>
-          <h2>{place.name}</h2>
-          <img src={place.pic} alt={place.name}/>
-        </div>
-      )
-    })
-    {/*Display contents of placesFormatted array*/} 
+function index(data) {
+  //Formatting data in place array into HTML so web page can display it.
+  let placesFormatted = data.places.map((place) => {
     return (
-        <Def>
-            <main>
-                <h1>PLACES INDEX PAGE</h1>
-                {placesFormatted}
-            </main>
-        </Def>
-    )
-
+      <div className="col-sm-6">
+        <h2>{place.name}</h2>
+        <p className="text-center">{place.cuisines}</p>
+        <img src={place.pic} alt={place.name} />
+        <p className="text-center">
+          Located in {place.city}, {place.state}
+        </p>
+      </div>
+    );
+  });
+  {
+    /*Display contents of placesFormatted array*/
   }
+  return (
+    <Def>
+      <main>
+        <h1>Places to Rant or Rave About</h1>
+        <div className="row">{placesFormatted}</div>
+      </main>
+    </Def>
+  );
+}
 
-module.exports = index
+module.exports = index;
