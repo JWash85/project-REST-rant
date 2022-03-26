@@ -1,19 +1,17 @@
-//Importing React 
 const React = require('react')
+const Def = require('./default')
 
-
-
-function Def (html) {
+function index () {
     return (
         <html>
             <head>
                 <title>Title</title>
             </head>
             <body>
-                {html.children}
+                (html.children)
             </body>
         </html>
     )
 }
 
-module.exports = Def
+module.exports = index
