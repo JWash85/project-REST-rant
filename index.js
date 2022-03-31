@@ -5,12 +5,16 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
+//required to use HTTP methods: PUT and DELETE
+const methodOverride = require('method-override')
+
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 //Code to import the router from the controller places.js
 app.use('/places', require('./controllers/places'))
+app.use(methodOverride('_method'))
 
 app.get('/', function(req, res){
     res.render('home')
