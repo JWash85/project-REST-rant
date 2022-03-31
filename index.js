@@ -13,8 +13,9 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 //Code to import the router from the controller places.js
-app.use('/places', require('./controllers/places'))
 app.use(methodOverride('_method'))
+app.use('/places', require('./controllers/places'))
+
 
 app.get('/', function(req, res){
     res.render('home')
