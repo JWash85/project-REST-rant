@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
     //redirect used to redirect to another route
     res.redirect('/places')
   })
+  //SHOW ROUTE
   router.get('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
@@ -39,10 +40,10 @@ router.post('/', (req, res) => {
       res.render('error404')
     }
     else {
-      res.render('places/show', {place: places[id], id})
+      res.render('places/show', {place: places[id], id })
     }
   })
-  
+  //EDIT ROUTE
   router.get('/:id/edit', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
@@ -55,7 +56,7 @@ router.post('/', (req, res) => {
       res.render('places/edit', { place: places[id], id})
     }
   })
-  
+  //PUT ROUTE
   router.put('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
@@ -82,7 +83,7 @@ router.post('/', (req, res) => {
         res.redirect(`/places/${id}`)
     }
   })
-
+  //DELETE ROUTE
   router.delete('/places/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
