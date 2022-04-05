@@ -7,13 +7,19 @@ function show(data) {
       <main>
         <img src={data.place.pic} />
         <h1>{data.place.name}</h1>
+        <h3>
+          Located {data.place.city}, {data.place.state} and serving{" "}
+          {data.place.cuisines}
+        </h3>
         <h3>Rating</h3>
         <p>Not Rated</p>
         <h3>Description</h3>
-        <p>
-          Located {data.place.city}, {data.place.state} and serving{" "}
-          {data.place.cuisines}
-        </p>
+        <h3>
+          {data.place.showEstablished()}
+        </h3>
+        <h4>
+          Serving {data.place.cuisines}
+        </h4>
         <a href={`/places/${data.id}/edit`} className="btn btn-warning">
           Edit
         </a>
@@ -30,3 +36,4 @@ function show(data) {
 }
 
 module.exports = show;
+
