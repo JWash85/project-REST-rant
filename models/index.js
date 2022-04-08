@@ -8,3 +8,4 @@ mongoose.connect(process.env.MONGO_URI, {
 
 //Export Place model from places.js
 module.exports.Place = require('./places')
+module.exports.Comment = require('./comment')
