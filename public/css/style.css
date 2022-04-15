@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color:#262324;
     text-align: center;
   }
   
@@ -7,19 +7,29 @@ body {
     margin-right: 20px;
     margin-left: 20px;
     background-color: white;
+    box-shadow: 5px 3px 15px rgb(87, 85, 85);
+    padding-top: 30px;
   }
 
+
 h1 {
+    font-size: 3em;
     text-align: center;
-    color: cornflowerblue;
+    text-shadow: 1px 1px #f5ce5a;
+    color: #CA0F01;
+    font-family: monospace;
+    margin-top: -10px;
 }
+
 
 img {
     margin-left: 0%;
+    
 }
 
 nav {
-    background-color: cornflowerblue;
+    background-color: #CA0F01;
+    text-shadow: 1px 1px #292526;
     padding: 10px;
 }
 
@@ -39,7 +49,40 @@ nav a {
 }
 
 nav a:hover {
-    color: pink;
+    color:#D4CF5D;
     text-decoration: none;
 }
+
+.btn-primary {
+    text-shadow: 1px 1px #292526;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 5px black;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background-color:#CA0F01;
+    border: none;
+    text-decoration: none;
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+label {
+    color: #CA0F01;
+    
+}
+
+.btn-warning {
+    margin: 1em;
+}
+
+
 

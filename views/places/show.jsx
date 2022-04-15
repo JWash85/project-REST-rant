@@ -23,9 +23,16 @@ function show(data) {
             <stong>- {c.author}</stong>
           </h3>
           <h4>Rating: {c.stars}</h4>
-          <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-          <input type="submit" className="btn btn-danger" value="Delete Comment" />
-        </form>
+          <form
+            method="POST"
+            action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}
+          >
+            <input
+              type="submit"
+              className="btn btn-danger"
+              value="Delete Comment"
+            />
+          </form>
         </div>
       );
     });
@@ -33,25 +40,37 @@ function show(data) {
   return (
     <Def>
       <main>
-        <img src={data.place.pic} />
-        <h1>{data.place.name}</h1>
-        <h3>
-          Located {data.place.city}, {data.place.state} and serving{" "}
-          {data.place.cuisines}
-        </h3>
-        <h3>Rating</h3>
-        {rating}
-        <h3>Description</h3>
-        <h3>{data.place.showEstablished()}</h3>
-        <h4>Serving {data.place.cuisines}</h4>
-        <a href={`/places/${data.id}/edit`} className="btn btn-warning">
-          Edit
-        </a>
-        <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
-          <button type="submit" className="btn btn-danger">
-            Delete
-          </button>
-        </form>
+        <div className="row">
+          <div className="col-sm-6">
+            <img src={data.place.pic} />
+            <h1>{data.place.name}</h1>
+            <h3>
+              Located {data.place.city}, {data.place.state} and serving{" "}
+              {data.place.cuisines}
+            </h3>
+          </div>
+          <div className="col-sm-6">
+            <h3>Rating</h3>
+            {rating}
+            <h3>Description</h3>
+            <h3>{data.place.showEstablished()}</h3>
+            <h4>Serving {data.place.cuisines}</h4>
+            <a
+              href={`/places/${data.place.id}/edit`}
+              className="btn btn-warning"
+            >
+              Edit
+            </a>
+            <form
+              method="POST"
+              action={`/places/${data.place.id}?_method=DELETE`}
+            >
+              <button type="submit" className="btn btn-danger">
+                Delete
+              </button>
+            </form>
+          </div>
+        </div>
         <h3>Comments</h3>
         {comments}
         <form action={`/places/${data.place.id}/comment`} method="POST">
@@ -71,17 +90,19 @@ function show(data) {
               <input id="author" name="author" className="form-control" />
             </div>
             <div className="form-group col-sm-4">
-              <label htmlFor="stars">Star Rating</label>
-              <input
-                type="range"
-                className="form-range"
-                step="0.5"
-                min="1"
-                max="5"
-                id="stars"
-                name="stars"
-                className="form-control"
-              />
+              <form action="/action_page.php">
+                <label htmlFor="stars">Star Rating</label>
+                <input
+                  type="range"
+                  className="form-range"
+                  step="0.5"
+                  min="1"
+                  max="5"
+                  id="stars"
+                  name="stars"
+                  //className="form-control"
+                />
+              </form>
             </div>
             <div className="form-group col-sm-2">
               <label htmlFor="rant">Rant?</label>
@@ -105,4 +126,3 @@ function show(data) {
 }
 
 module.exports = show;
-
