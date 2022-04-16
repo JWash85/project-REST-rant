@@ -15,7 +15,7 @@ body {
 h1 {
     font-size: 3em;
     text-align: center;
-    text-shadow: 1px 1px #f5ce5a;
+    text-shadow: 1px 1px #292526;
     color: #CA0F01;
     font-family: monospace;
     margin-top: -10px;
@@ -23,11 +23,12 @@ h1 {
 
 .locName{
     margin-top: -25px;
+    text-shadow: 1px 1px #f5ce5a;
 }
 
 h2 a {
     color:#CA0F01;
-    text-shadow: 1px 1px #292526;
+    text-shadow: 1px 1px #f5ce5a;
 }
 h2 a:hover {
     color:#D4CF5D;
