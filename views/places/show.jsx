@@ -2,8 +2,8 @@ const React = require("react");
 const Def = require("../default");
 
 function show(data) {
-  let comments = <h3 className="inactive">No comments yet!</h3>;
-  let rating = <h3 className="inactive">Not yet rated</h3>;
+  let comments = <h4 className="inactive">No comments yet!</h4>;
+  let rating = <h4 className="inactive">Not yet rated</h4>;
   if (data.place.comments.length) {
     let sumRatings = data.place.comments.reduce((tot, c) => {
       return tot + c.stars;
@@ -43,17 +43,17 @@ function show(data) {
         <div className="row">
           <div className="col-sm-6">
             <img src={data.place.pic} />
-            <h1>{data.place.name}</h1>
-            <h3>
+            <h1 className="locName">{data.place.name}</h1>
+            <h4>
               Located {data.place.city}, {data.place.state} and serving{" "}
               {data.place.cuisines}
-            </h3>
+            </h4>
           </div>
           <div className="col-sm-6">
-            <h3>Rating</h3>
+            <h4>Rating</h4>
             {rating}
-            <h3>Description</h3>
-            <h3>{data.place.showEstablished()}</h3>
+            <h4>Description</h4>
+            <h4>{data.place.showEstablished()}</h4>
             <h4>Serving {data.place.cuisines}</h4>
             <a
               href={`/places/${data.place.id}/edit`}
@@ -71,7 +71,7 @@ function show(data) {
             </form>
           </div>
         </div>
-        <h3>Comments</h3>
+        <h4>Comments</h4>
         {comments}
         <form action={`/places/${data.place.id}/comment`} method="POST">
           <div className="row">

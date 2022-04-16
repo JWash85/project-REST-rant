@@ -21,10 +21,32 @@ h1 {
     margin-top: -10px;
 }
 
+.locName{
+    margin-top: -25px;
+}
+
+h2 a {
+    color:#CA0F01;
+    text-shadow: 1px 1px #292526;
+}
+h2 a:hover {
+    color:#D4CF5D;
+    text-decoration: none;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
 
 img {
     margin-left: 0%;
+    height: 400px;
+    margin-bottom: 2em;
     
+}
+.burger{
+    height: 550px;
 }
 
 nav {
@@ -58,7 +80,7 @@ nav a:hover {
     background-color: black;
     border-radius: 10px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 3em;
     box-shadow: 1px 1px 5px black;
     border: none;
     text-decoration: none;
