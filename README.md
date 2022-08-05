@@ -5,7 +5,7 @@ REST-Rant is a resturant rating app where users can upload images of resturants 
 ![Home Page](public/images/rest-Rant.png)
 
 
-### Installations 
+## Installations 
 ### Node on Mac
 - Install Homebrew first
   - On the Terminal, type xcode-select --install
