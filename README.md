@@ -5,11 +5,33 @@ REST-Rant is a resturant rating app where users can upload images of resturants 
 ![Home Page](public/images/rest-Rant.png)
 
 
+### Installations 
+### Node on Mac
+- Install Homebrew first
+  - On the Terminal, type xcode-select --install
+  - Go to [Homebrew](https://brew.sh/) homepage and copy link
+  - Go back to your terminal and paste from your clipboard with the keyboard shortcut Command **+ V**, then press Enter
+  - Now that we have Homebrew installed, we can use the brew command in the terminal. Type the command **brew install** node and then press Enter
+
+- Installing Node in terminal
+  - Type the command **sudo apt install nodejs** and then press Enter
+  - Type the command **sudo apt install npm** and then press Enter
+  - Enter the command **npm -v** to verify npm was installed
+
+### MongoDB Community Edition on Mac
+link to install on Mac [MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+- When you reach and run the brew services list command in the terminal, you are finished with the installation and do not need to follow the remaining instructions.
+- After running this command, make sure you see mongodb-community started.
+
+### MongoDB Compass
+link to install [Compass](https://www.mongodb.com/docs/compass/master/install/)
+
 ## Technologies
 - ran on **localhost:3000**
-- dependencies used for project are **mongoose React** and **express** 
+- dependencies used for project are **mongoose, React** and **express** 
 
-### Routes
+
+## Routes
 
 | Method |    Path                     | Purpose     |
 | :----: | :---------:                 | :---------: |
