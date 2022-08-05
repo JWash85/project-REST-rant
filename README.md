@@ -1,6 +1,15 @@
 # Project REST-Rant
 
-REST-Rant is an app where users can review restaurants.
+REST-Rant is a resturant rating app where users can upload images of resturants the have visted. The user can also rate and leave their review of those restaurants. Users are able to edit any details they posted about the resturant such as the name, location, year found, and type of cuisines served at the resturant. The user can also delete the entire post if desired.    
+
+![Home Page](public/images/rest-Rant.png)
+
+
+## Technologies
+- ran on **localhost:3000**
+- dependencies used for project are **mongoose React** and **express** 
+
+### Routes
 
 | Method |    Path                     | Purpose     |
 | :----: | :---------:                 | :---------: |

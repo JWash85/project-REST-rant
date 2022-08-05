@@ -73,7 +73,7 @@ function show(data) {
         </div>
         <h4>Comments</h4>
         {comments}
-        <form action={`/places/${data.place.id}/comment`} method="POST">
+        <form action={`/places/${data.place.id}/comment?_method=POST`}>
           <div className="row">
             <div className="form-group col-sm-12">
               <label htmlFor="content">Content</label>
